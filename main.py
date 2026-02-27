@@ -1,7 +1,7 @@
 from extract import extract_SalesOrderHeader, extract_SalesOrderDetail, extract_Production
 from transform import transform, aggregation
 from load import  load_monthly
-
+#issue with load to db
 def test():
     df_transform = transform(extract_SalesOrderHeader(), extract_SalesOrderDetail(), extract_Production())
     df_agg = aggregation(df_transform)
